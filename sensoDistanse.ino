@@ -26,20 +26,20 @@ void loop() {
   lcd.begin(16, 2);
   
   digitalWrite(trigger, LOW);
-  delay(2);
+  delayMicroseconds(2);
   digitalWrite(trigger, HIGH);
-  delay(10);
+  delayMicroseconds(10);
   digitalWrite(trigger, LOW);
 
-  int duracao = pulseIn(echo, HIGH);
-  int distancia = duracao * 0.034 / 2;
+  float duracao = pulseIn(echo, HIGH);
+  float distancia = duracao * 0.034 / 2;
 
-  if(distancia <= 10 && distancia > 5){
+  if(distancia <= 10.0 && distancia > 5.0){
     tone(buzzer, 1500);
     delay(250);
     noTone(buzzer);
     delay(250);
-  } else if(distancia <= 5){
+  } else if(distancia <= 5.0){
     tone(buzzer, 1500);
     delay(250);
     noTone(buzzer);
