@@ -1,1 +1,1 @@
-<img src="./assets/sensor de movimento com leds.png" width="200" height="1800">
+<img src="./assets/sensor de movimento com leds.png" width="800" height="600">
